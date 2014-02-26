@@ -1,0 +1,61 @@
+<% include header.ejs %>
+
+<script>
+    <% if(error){ %>
+    alert("<%=error%>");
+    <%}%>
+</script>
+
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="row clearfix">
+                <div class="col-md-6 column">
+                    <div class="build">
+                        <form class="form-horizontal">
+                            <fieldset>
+
+                                <!-- Form Name -->
+                                <legend>用户登录</legend>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="username">账号</label>
+                                    <div class="col-md-6">
+                                        <input id="username" name="username" type="text" placeholder="请在此输入您的账号" class="form-control input-md" required="">
+
+                                    </div>
+                                </div>
+
+                                <!-- Password input-->
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="password">密码</label>
+                                    <div class="col-md-6">
+                                        <input id="password" name="password" type="password" placeholder="请在此输入您的密码" class="form-control input-md" required="">
+                                          <p class="help-block">忘记密码</p>
+                                    </div>
+                                </div>
+
+                                <!-- Button -->
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="loginBtn"></label>
+                                    <div class="col-md-6">
+                                        <button id="loginBtn" name="loginBtn" class="btn btn-primary">登录</button>
+                                        <a href="/user/reg" style="margin-left: 30px;">还没有账号？ 马上注册！</a>
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </form>
+
+                    </div>
+
+                </div>
+                <div class="col-md-6 column">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include footer.ejs%>
